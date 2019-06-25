@@ -5,17 +5,25 @@ function createMultiplicationTable(startNumber, endNumber){
 }
 
 function formatToMultiplicationTable(multiplicationList){
-    let multiplicationTable = "";
-    for (i = 0; i < multiplicationList.length; i ++) {
+    let firstRow = multiplicationList[0];
+    let multiplicationTable = formatRow(firstRow);
+
+    for (i = 1; i < multiplicationList.length; i ++) {
         const rowList = multiplicationList[i];
-        let row = formatMultiplicationItem(rowList[0]);
-        for (j = 1; j < rowList.length; j++) {
-            const item = rowList[j];
-            row += ` ${formatMultiplicationItem(item)}`;
-        }
-        multiplicationTable += row + '\n';
+        const row = formatRow(rowList);
+        multiplicationTable += '\n' + row;
     }
+
     return multiplicationTable
+}
+
+function formatRow(rowList){
+    let row = formatMultiplicationItem(rowList[0]);
+    for (j = 1; j < rowList.length; j++) {
+        const item = rowList[j];
+        row += ` ${formatMultiplicationItem(item)}`;
+    }
+    return row;
 }
 
 function formatMultiplicationItem(multiplication){

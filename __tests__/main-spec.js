@@ -41,7 +41,7 @@ it('should return null when end number is 1001', () => {
 it('should return 1*1=1 when start number is 1 and end number is 1', () => {
     const startNumber = 1;
     const endNumber = 1;
-    expect(createMultiplicationTable(startNumber, endNumber)).toBe("1*1=1\n");
+    expect(createMultiplicationTable(startNumber, endNumber)).toBe("1*1=1");
 })
 
 // ## Task 5 Should return two rows when start number is 1 and end number is 2 (Driven multiple rows)
@@ -55,7 +55,7 @@ it('should return 1*1=1 when start number is 1 and end number is 1', () => {
 it('should return two rows when start number is 1 and end number is 2', () => {
     const startNumber = 1;
     const endNumber = 2;
-    expect(createMultiplicationTable(startNumber, endNumber)).toBe("1*1=1\n1*2=2 2*2=4\n");
+    expect(createMultiplicationTable(startNumber, endNumber)).toBe("1*1=1\n1*2=2 2*2=4");
 })
 
 // ## Task 6 Should return part of multiplication table when start number is 2 and end number is 4 (Driven part of multiplication table)
@@ -70,5 +70,5 @@ it('should return two rows when start number is 1 and end number is 2', () => {
 it('should return part of multiplication table when start number is 2 and end number is 4', () => {
     const startNumber = 2;
     const endNumber = 4;
-    expect(createMultiplicationTable(startNumber, endNumber)).toBe("2*2=4\n2*3=6 3*3=9\n2*4=8 3*4=12 4*4=16\n");
+    expect(createMultiplicationTable(startNumber, endNumber)).toBe("2*2=4\n2*3=6 3*3=9\n2*4=8 3*4=12 4*4=16");
 })
